@@ -1,0 +1,34 @@
+https-strict: behind-the-scene false
+matrix-off: about-scheme true
+matrix-off: behind-the-scene true
+matrix-off: chrome-extension-scheme true
+matrix-off: chrome-scheme true
+matrix-off: moz-extension-scheme true
+matrix-off: opera-scheme true
+matrix-off: vivaldi-scheme true
+matrix-off: wyciwyg-scheme true
+noscript-spoof: * true
+referrer-spoof: * true
+referrer-spoof: behind-the-scene false
+* * * block
+* * css allow
+* * image allow
+* 1st-party * allow
+* addthis.com * inherit
+* cdn.popcash.net * inherit
+* doubleclick.net * inherit
+* googleads.g.doubleclick.net * inherit
+* googlesyndication.com * inherit
+* googletagmanager.com * inherit
+* histats.com * inherit
+* jwpltx.com * inherit
+* pagead2.googlesyndication.com * inherit
+* popcash.net * inherit
+* s10.histats.com * inherit
+* s7.addthis.com * inherit
+* static.doubleclick.net * inherit
+* www.googletagmanager.com * inherit
+animedao29.stream proxydata.me * allow
+animedao29.stream www.googleapis.com * allow
+www.youtube.com googlevideo.com * allow
+www2.gomovies123.to gounlimited.to * allow
