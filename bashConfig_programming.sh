@@ -50,5 +50,6 @@ cc() { g++ $1.cc -o $1 && ./$1 ;}
 
 # python
 TRUST="--trusted-host pypi.org --trusted-host files.pythonhosted.org"
+py_server() { python -m SimpleHTTPServer 8080; }
 
 
