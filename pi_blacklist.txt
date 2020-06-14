@@ -40,6 +40,7 @@ cdn.redwap.xyz
 www.indianpornvideo.org
 9eb10b7a3d04a.com
 hubt.pornhub.com
+pornve.com
 
 #===========#
 #   REGEX   #
@@ -51,9 +52,5 @@ ads\.[a-zA-Z0-9]+\.com$
 adservice\.google\.com
 googleadservices\.com
 popads\.net
-
-
-
-.*xok4y.*
 
 likuoo\.video
