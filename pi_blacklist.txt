@@ -41,6 +41,13 @@ www.indianpornvideo.org
 9eb10b7a3d04a.com
 hubt.pornhub.com
 pornve.com
+www.megatube.xxx
+pornxp.com
+www.porngo.com
+www.xxxfiles.com
+www.ceporn.net
+www.xxxfiles.com
+es.spankbang.com/
 
 #===========#
 #   REGEX   #
@@ -52,5 +59,10 @@ ads\.[a-zA-Z0-9]+\.com$
 adservice\.google\.com
 googleadservices\.com
 popads\.net
+www.yespornplease.porn
 
 likuoo\.video
+[A-Za-z0-9]+\.xxx
+[A-Za-z0-9]+\.porn
+.*porn.*\.[A-Zaz]
+.*xxx.*\.[A-Zaz]
