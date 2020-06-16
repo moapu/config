@@ -66,3 +66,4 @@ likuoo\.video
 [A-Za-z0-9]+\.porn
 .*porn.*\.[A-Zaz]
 .*xxx.*\.[A-Zaz]
+[A-Za-z0-9]+\.spankbang.*\.[A-Za-z]
