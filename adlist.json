@@ -1,1 +1,154 @@
-[{"id":1,"address":"https:\/\/raw.githubusercontent.com\/StevenBlack\/hosts\/master\/hosts","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":2,"address":"https:\/\/mirror1.malwaredomains.com\/files\/justdomains","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":3,"address":"http:\/\/sysctl.org\/cameleon\/hosts","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":4,"address":"https:\/\/s3.amazonaws.com\/lists.disconnect.me\/simple_tracking.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":5,"address":"https:\/\/s3.amazonaws.com\/lists.disconnect.me\/simple_ad.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":7,"address":"https:\/\/raw.githubusercontent.com\/Perflyst\/PiHoleBlocklist\/master\/android-tracking.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":8,"address":"https:\/\/www.github.developerdan.com\/hosts\/lists\/ads-and-tracking-extended.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":9,"address":"https:\/\/raw.githubusercontent.com\/chadmayfield\/my-pihole-blocklists\/master\/lists\/pi_blocklist_porn_all.list","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":10,"address":"https:\/\/v.firebog.net\/hosts\/Easyprivacy.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":11,"address":"https:\/\/adaway.org\/hosts.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":12,"address":"https:\/\/raw.githubusercontent.com\/mostafaapu\/config\/master\/pi_blacklist.txt","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":13,"address":"https:\/\/raw.githubusercontent.com\/chadmayfield\/pihole-blocklists\/master\/lists\/pi_blocklist_porn_top1m.list","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/adlists.list"},{"id":14,"address":"https:\/\/v.firebog.net\/hosts\/AdguardDNS.txt","enabled":1,"date_added":1589692673,"date_modified":1589692673,"comment":""},{"id":15,"address":"https:\/\/raw.githubusercontent.com\/jdlingyu\/ad-wars\/master\/hosts","enabled":1,"date_added":1589692754,"date_modified":1589692754,"comment":""},{"id":16,"address":"https:\/\/raw.githubusercontent.com\/bigdargon\/hostsVN\/master\/hosts","enabled":1,"date_added":1589692842,"date_modified":1589692842,"comment":""},{"id":17,"address":"https:\/\/raw.githubusercontent.com\/kboghdady\/youTube_ads_4_pi-hole\/master\/youtubelist.txt","enabled":0,"date_added":1589743477,"date_modified":1591474040,"comment":null},{"id":18,"address":"https:\/\/gitlab.com\/quidsup\/notrack-blocklists\/raw\/master\/notrack-blocklist.txt","enabled":1,"date_added":1592164842,"date_modified":1592164842,"comment":"notrack-blocklist.txt"},{"id":19,"address":"https:\/\/hostfiles.frogeye.fr\/firstparty-trackers-hosts.txt","enabled":1,"date_added":1592164887,"date_modified":1592164887,"comment":"firstparty-trackers-hosts.txt"},{"id":20,"address":"https:\/\/raw.githubusercontent.com\/anudeepND\/blacklist\/master\/adservers.txt","enabled":1,"date_added":1592164944,"date_modified":1592164944,"comment":"adservers.txt"}]
+[
+	{
+		"id": 1,
+		"address": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 2,
+		"address": "https://mirror1.malwaredomains.com/files/justdomains",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 3,
+		"address": "http://sysctl.org/cameleon/hosts",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 4,
+		"address": "https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 5,
+		"address": "https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 7,
+		"address": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 8,
+		"address": "https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 9,
+		"address": "https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_all.list",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 10,
+		"address": "https://v.firebog.net/hosts/Easyprivacy.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 11,
+		"address": "https://adaway.org/hosts.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 12,
+		"address": "https://raw.githubusercontent.com/mostafaapu/config/master/pi_blacklist.txt",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 13,
+		"address": "https://raw.githubusercontent.com/chadmayfield/pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/adlists.list"
+	},
+	{
+		"id": 14,
+		"address": "https://v.firebog.net/hosts/AdguardDNS.txt",
+		"enabled": 1,
+		"date_added": 1589692673,
+		"date_modified": 1589692673,
+		"comment": ""
+	},
+	{
+		"id": 15,
+		"address": "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+		"enabled": 1,
+		"date_added": 1589692754,
+		"date_modified": 1589692754,
+		"comment": ""
+	},
+	{
+		"id": 16,
+		"address": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts",
+		"enabled": 1,
+		"date_added": 1589692842,
+		"date_modified": 1589692842,
+		"comment": ""
+	},
+	{
+		"id": 17,
+		"address": "https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt",
+		"enabled": 0,
+		"date_added": 1589743477,
+		"date_modified": 1591474040,
+		"comment": null
+	},
+	{
+		"id": 18,
+		"address": "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt",
+		"enabled": 1,
+		"date_added": 1592164842,
+		"date_modified": 1592164842,
+		"comment": "notrack-blocklist.txt"
+	},
+	{
+		"id": 19,
+		"address": "https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt",
+		"enabled": 1,
+		"date_added": 1592164887,
+		"date_modified": 1592164887,
+		"comment": "firstparty-trackers-hosts.txt"
+	},
+	{
+		"id": 20,
+		"address": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+		"enabled": 1,
+		"date_added": 1592164944,
+		"date_modified": 1592164944,
+		"comment": "adservers.txt"
+	}
+]
