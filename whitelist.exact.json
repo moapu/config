@@ -1,1 +1,56 @@
-[{"id":1,"type":0,"domain":"www.cosmopolitan.com","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/whitelist.txt"},{"id":2,"type":0,"domain":"graph.facebook.com","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/whitelist.txt"},{"id":3,"type":0,"domain":"edge-mqtt.facebook.com","enabled":1,"date_added":1589690961,"date_modified":1589690961,"comment":"Migrated from \/etc\/pihole\/whitelist.txt"},{"id":4,"type":0,"domain":"d.joinhoney.com","enabled":1,"date_added":1590096246,"date_modified":1590096246,"comment":null},{"id":5,"type":0,"domain":"s.joinhoney.com","enabled":1,"date_added":1590096250,"date_modified":1590096250,"comment":null},{"id":6,"type":0,"domain":"scontent-iad3-1.cdninstagram.com","enabled":1,"date_added":1591303848,"date_modified":1591303848,"comment":null}]
+[
+	{
+		"id": 1,
+		"type": 0,
+		"domain": "www.cosmopolitan.com",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/whitelist.txt"
+	},
+	{
+		"id": 2,
+		"type": 0,
+		"domain": "graph.facebook.com",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/whitelist.txt"
+	},
+	{
+		"id": 3,
+		"type": 0,
+		"domain": "edge-mqtt.facebook.com",
+		"enabled": 1,
+		"date_added": 1589690961,
+		"date_modified": 1589690961,
+		"comment": "Migrated from /etc/pihole/whitelist.txt"
+	},
+	{
+		"id": 4,
+		"type": 0,
+		"domain": "d.joinhoney.com",
+		"enabled": 1,
+		"date_added": 1590096246,
+		"date_modified": 1590096246,
+		"comment": null
+	},
+	{
+		"id": 5,
+		"type": 0,
+		"domain": "s.joinhoney.com",
+		"enabled": 1,
+		"date_added": 1590096250,
+		"date_modified": 1590096250,
+		"comment": null
+	},
+	{
+		"id": 6,
+		"type": 0,
+		"domain": "scontent-iad3-1.cdninstagram.com",
+		"enabled": 1,
+		"date_added": 1591303848,
+		"date_modified": 1591303848,
+		"comment": null
+	}
+]
