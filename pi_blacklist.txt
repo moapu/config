@@ -48,6 +48,8 @@ www.xxxfiles.com
 www.ceporn.net
 www.xxxfiles.com
 es.spankbang.com/
+www.yespornplease.porn
+http://sxyprn.net/
 
 #===========#
 #   REGEX   #
@@ -59,7 +61,6 @@ ads\.[a-zA-Z0-9]+\.com$
 adservice\.google\.com
 googleadservices\.com
 popads\.net
-www.yespornplease.porn
 
 likuoo\.video
 [A-Za-z0-9]+\.xxx
