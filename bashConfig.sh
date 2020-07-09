@@ -14,7 +14,7 @@ done
 track_git() {
   if [ -d .git ]; then
 
-    modified_count=$(git status | grep "modified" -c)
+    modified_count=$(git status | grep "modified|new file" -c)
     if [[ ${modified_count} -gt 0 ]]; then
       printf " ${BRed}[${modified_count}+]${Color_Off}"
     fi
