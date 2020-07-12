@@ -60,7 +60,7 @@ trap 't_start' DEBUG
 PROMPT_COMMAND='set_prompt'
 
 export PS1='\
-\[\]\n\n\[\]
+\[\]\n\n\
 \['""${BWhite}'\]---\['"${Color_Off}"'\]\
 \['"${BCyan}"'\] \T \['"${Color_Off}"'\]\
 \['"${BBlue}"'\]($t_show) \['"${Color_Off}"'\]\
@@ -69,6 +69,6 @@ export PS1='\
 \['"${BGreen}"'\]`__git_ps1`\['"${Color_Off}"'\]\
 \[`track_git`\]\
 \['""${BWhite}'\] --- \['"${Color_Off}"'\]\
-\[\]\n\[\]\
+\[\]\n\
 \['"${BWhite}"'\]➤➤➤ \['"${Color_Off}"'\]\
 \[\]'
