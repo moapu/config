@@ -72,16 +72,6 @@ On_ICyan='\033[0;106m'   # Cyan
 On_IWhite='\033[0;107m'  # White
 
 # ----- EXPORTS -----
-export PS1='\
-\[\]\n\n\
-\['"${BPurple}"'\]@\u\['"${Color_Off}"'\]\
-\['"${BCyan}"'\] \T\['"${Color_Off}"'\]\
-\['"${BYellow}"'\] \w\['"${Color_Off}"'\]\
-\['"${BGreen}"'\]`__git_ps1`\['"${Color_Off}"'\]\
-\[\]\n\
-\['"${BWhite}"'\]➤➤➤ \['"${Color_Off}"'\]\
-\[\]'
-
 export EDITOR='npp -w'
 export HISTTIMEFORMAT='%b %d %I:%M %p ' # using strftimr format
 export HISTCONTROL=ignoreboth           # ignoredups:ignorespace
@@ -126,36 +116,40 @@ alias d='cd H:/Desktop/'
 
 dup() { cat -n $1 | sort -k2 -k1n | uniq -f1 -cd; }
 
+unique() {
+	dup ${2} | grep "${1}"
+}
+
 kill() {
-  for pid_name in "$@"; do
-    taskkill -f -im "${pid_name}.exe" -t
-  done
+	for pid_name in "$@"; do
+		taskkill -f -im "${pid_name}.exe" -t
+	done
 }
 
 b() {
-  i=1
-  re='^[2-9]$'
+	i=1
+	re='^[2-9]$'
 
-  if [[ $# == 0 ]] || [[ $1 = 1 ]]; then
-    git_bash &
-    disown
+	if [[ $# == 0 ]] || [[ $1 = 1 ]]; then
+		git_bash &
+		disown
 
-  elif [[ $1 =~ $re ]]; then
-    until [ $i -gt $1 ]; do
-      git_bash &
-      disown
-      ((i = i + 1))
-    done
+	elif [[ $1 =~ $re ]]; then
+		until [ $i -gt $1 ]; do
+			git_bash &
+			disown
+			((i = i + 1))
+		done
 
-  else
-    error_msg "MUST be 1..9"
-  fi
+	else
+		error_msg "MUST be 1..9"
+	fi
 }
 
 # ------ PROGRAMMING -----
 
 jrun() {
-  javac $1.java && java $1 && rm $1.class
+	javac $1.java && java $1 && rm $1.class
 }
 
 alias .run='dotnet run'
@@ -177,20 +171,20 @@ alias .debugoff='export VSTEST_HOST_DEBUG=0'
 .watch_testc() { .watch_test --filter ClassName~$1; }
 
 .debug_test() {
-  .debugon
-  .testm $1
-  .debugoff
+	.debugon
+	.testm $1
+	.debugoff
 }
 
 .coverage() {
-  repo=$(${1:-PWD})
-  .kill
-  dotnet test ${repo} \
-  -p:CollectCoverage=true \
-  -p:CoverletOutputFormat=\"json,opencover,lcov\" \
-  -p:CoverletOutput="${repo}/" \
-  -p:ExcludeByAttribute=\"Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute\" ||
-    die "Failed to run dotnet test"
+	repo=$(${1:-PWD})
+	.kill
+	dotnet test ${repo} \
+	-p:CollectCoverage=true \
+	-p:CoverletOutputFormat=\"json,opencover,lcov\" \
+	-p:CoverletOutput="${repo}/" \
+	-p:ExcludeByAttribute=\"Obsolete,GeneratedCodeAttribute,CompilerGeneratedAttribute\" ||
+		die "Failed to run dotnet test"
 }
 
 .ref_add_to_sln() { dotnet sln add $1; }
@@ -247,34 +241,79 @@ glg() { glc --grep=$1; }
 gcp() { gc "$1" && gp; }
 
 mm() {
-  gco ${1:-master}
-  gpl
-  gco -
-  gm ${1:-master}
+	gco ${1:-master}
+	gpl
+	gco -
+	gm ${1:-master}
+}
+
+gbra() {
+	if [[ $(git branch | grep "main") ]]; then
+		git checkout main
+		git branch | grep -v "main" | xargs git branch -D
+
+	else
+		git checkout master
+		git branch | grep -v "master" | xargs git branch -D
+	fi
+}
+
+pull_if_branch_is() {
+	is_master=$(git rev-parse --abbrev-ref HEAD | grep ${1})
+	if [[ "${is_master}" ]]; then
+		git pull
+	else
+		error_msg "NOT '$1' branch"
+	fi
+}
+
+rm_redis_key() {
+	local keys=$(redis-cli KEYS "*${1}*")
+
+	if [[ -n "$keys" ]]; then
+		for key in ${keys[@]}; do
+			local result=$(echo "redis-cli DEL ${key}" | bash)
+			if [[ $result == "1" ]]; then
+				echo "REMOVED | $key"
+			fi
+		done
+	else
+		error_msg "REDIS KEYS NOT FOUND"
+	fi
 }
 
 find_replace() {
-  sed -i "s/${1}/${2}/" ${3}
+	sed -i "s/${1}/${2}/" ${3}
 }
 
 highlight() {
-  echo "${Black}${On_Cyan} $@ ${Color_Off}"
+	echo "${Black}${On_Cyan} $@ ${Color_Off}"
 }
 
 draw_line() {
-  echo "${BCyan}.................................... ${1:-.} ...................................${Color_Off}"
+	echo "${BCyan}.................................... ${1:-.} ...................................${Color_Off}"
 }
 
 highlight_with_date() {
-  if [ $# -eq 0 ]; then
-    echo "================ $(date --utc --iso-8601=sec) ================"
-  else
-    color=$1
-    shift 1
-    echo "$color================ $@ $(date --utc --iso-8601=sec) ================${Color_Off}"
-  fi
+	if [ $# -eq 0 ]; then
+		echo "================ $(date --utc --iso-8601=sec) ================"
+	else
+		color=$1
+		shift 1
+		echo "$color================ $@ $(date --utc --iso-8601=sec) ================${Color_Off}"
+	fi
 }
 
 error_msg() {
-  echo "\n${BRed}ERROR: $*${Color_Off}" >&2
+	echo "\n${BRed}ERROR: $*${Color_Off}" >&2
 }
+
+export PS1='\
+\[\]\n\n\
+\['"${BPurple}"'\]@\u\['"${Color_Off}"'\]\
+\['"${BCyan}"'\] [\T]\['"${Color_Off}"'\]\
+\['"${BYellow}"'\] \w\['"${Color_Off}"'\]\
+\['"${BGreen}"'\]`__git_ps1`\['"${Color_Off}"'\]\
+\[\]\n\
+\['"${BWhite}"'\]$ \['"${Color_Off}"'\]\
+\[\]'
