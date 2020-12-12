@@ -103,14 +103,12 @@ alias cd..='cd ../..'
 alias cd...='cd ../../..'
 alias cd....='cd ../../../..'
 alias ,='code .'
-alias git_bash='${BASH_PATH}/git-bash.exe'
 alias k='kill'
 alias echo='echo -e'
 alias src='source ~/.bash_profile'
 alias bashrc='npp ~/.bashrc'
 alias vh='vagrant halt'
 alias vd='vagrant destroy'
-alias git_bash='${BASH_PATH}/git-bash.exe'
 alias config='cd H:/Desktop/Git/config && explorer .'
 alias d='cd H:/Desktop/'
 
@@ -124,6 +122,10 @@ kill() {
 	for pid_name in "$@"; do
 		taskkill -f -im "${pid_name}.exe" -t
 	done
+}
+
+git_bash() {
+	"${BASH_PATH}/git-bash.exe"
 }
 
 b() {
@@ -149,7 +151,20 @@ b() {
 # ------ PROGRAMMING -----
 
 jrun() {
-	javac $1.java && java $1 && rm $1.class
+	name=$1
+
+	if [[ "$name" =~ \.java$ ]]; then
+		name=${name::-5}
+
+	elif [[ "$name" =~ \.class$ ]]; then
+		name=${name::-6}
+
+	elif [[ "$name" =~ \.$ ]]; then
+		name=${name::-1}
+	fi
+
+	javac "${name}.java"
+	java $name
 }
 
 alias .run='dotnet run'
