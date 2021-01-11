@@ -6,6 +6,9 @@ s.amazon-adsystem.com
 amazon-adsystem.com
 googleads.g.doubleclick.net
 analytics.mobile.walmart.com
+app-analytics-v2.snapchat.com
+analytics.robinhood.com
+ads-interfaces.sc-cdn.net
 
 canonicalizer.ucsuri.tcs
 cdn.porn62.com
