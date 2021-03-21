@@ -116,6 +116,7 @@ dup() { cat -n $1 | sort -k2 -k1n | uniq -f1 -cd; }
 
 unique() {
 	dup ${2} | grep "${1}"
+	# cat file | sort | uniq -u
 }
 
 kill() {
