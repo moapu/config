@@ -45,6 +45,14 @@ app-analytics-v2.snapchat.com
 webattachments.snapchat.com
 cognac-prod.appspot.com
 crashlyticsreports-pa.googleapis.com
+udm.scorecardresearch.com
+mobile-collector.newrelic.com
+api.mapbox.com
+app.adjust.com
+app.adjust.world
+tag.researchnow.com
+tags.tiqcdn.com
+
 
 canonicalizer.ucsuri.tcs
 cdn.porn62.com
