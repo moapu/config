@@ -120,7 +120,7 @@ unique() {
 }
 
 del-dup-keep-1st-instance() {
-	cat -n $1 | sort -uk2 | sort -nk1 | cut -f2-
+	cat -n $1 | sort -uk2 | sort -nk1 | cut -f2- > ${2:-refined}.txt 2>&1
 }
 
 kill() {
