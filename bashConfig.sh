@@ -119,6 +119,10 @@ unique() {
 	# cat file | sort | uniq -u
 }
 
+del-dup-keep-1st-instance() {
+	cat -n $1 | sort -uk2 | sort -nk1 | cut -f2-
+}
+
 kill() {
 	for pid_name in "$@"; do
 		taskkill -f -im "${pid_name}.exe" -t
