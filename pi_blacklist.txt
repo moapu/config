@@ -63,6 +63,7 @@ amazon-adsystem.com
 pubads.g.doubleclick.net
 analytics.mobile.walmart.com
 client-analytics.braintreegateway.com
+storage.googleapis.com
 
 #=============#
 # ADULT-SITES #
