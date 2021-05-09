@@ -1,12 +1,30 @@
 #===========#
 #   EXACT   #
 #===========#
+api.rewards.brave.com
+crashlyticsreports-pa.googleapis.com
+firebase-settings.crashlytics.com
+grant.rewards.brave.com
+rewards.brave.com
+aax.amazon-adsystem.com
+adservice.google.com
+analytics.twitter.com
+c.amazon-adsystem.com
+googleads.g.doubleclick.net
+pagead2.googlesyndication.com
+s.amazon-adsystem.com
+sa.scorecardresearch.com
+sb.scorecardresearch.com
+securepubads.g.doubleclick.net
+tag.researchnow.com
+tpc.googlesyndication.com
+googleads4.g.doubleclick.net
+www.googletagservices.com
+ai-face-recognition-v2-api.wyzecam.com
+ai-feedback-video-api.wyzecam.com
 api2.branch.io
 cdn.branch.io
-firebase-settings.crashlytics.com
 ad.doubleclick.net
-crashlyticsreports-pa.googleapis.com
-tag.researchnow.com
 www.ebayadservices.com
 conversions.appsflyer.com
 gcdsdk.appsflyer.com
@@ -19,9 +37,6 @@ mobile-collector.newrelic.com
 analytics.foresee.com
 tags.tiqcdn.com
 settings.crashlytics.com
-adservice.google.com
-googleads.g.doubleclick.net
-pagead2.googlesyndication.com
 srv.buysellads.com
 static.doubleclick.net
 a.adtng.com
@@ -31,11 +46,7 @@ analytics.robinhood.com
 app.adjust.com
 app.adjust.net.in
 app.adjust.world
-sb.scorecardresearch.com
 udm.scorecardresearch.com
-api.rewards.brave.com
-grant.rewards.brave.com
-rewards.brave.com
 ads-resources-legacy.waze.com
 ads-resources.waze.com
 ads-interfaces.sc-cdn.net
@@ -48,14 +59,11 @@ webattachments.snapchat.com
 s.sc-cdn.net
 snapchat-payments-gateway.snapchat.com
 analytics.chase.com
-s.amazon-adsystem.com
 amazon-adsystem.com
-tpc.googlesyndication.com
-securepubads.g.doubleclick.net
 pubads.g.doubleclick.net
-www.googletagservices.com
 analytics.mobile.walmart.com
 client-analytics.braintreegateway.com
+storage.googleapis.com
 
 #=============#
 # ADULT-SITES #
