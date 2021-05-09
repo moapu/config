@@ -222,7 +222,7 @@ prompt() {
 }
 
 show_command() {
-	prompt $@
+	prompt "# $@"
 	"$@"
 }
 
