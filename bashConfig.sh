@@ -1,3 +1,6 @@
+export MY_PROGRAMS="/c/Program\ Files"
+
+# -------- COLORS -------
 # Reset
 Color_Off='\033[0m' # Text Reset
 
@@ -71,23 +74,25 @@ On_IPurple='\033[0;105m' # Purple
 On_ICyan='\033[0;106m'   # Cyan
 On_IWhite='\033[0;107m'  # White
 
-# ----- EXPORTS -----
-export EDITOR='npp -w'
+# -------- Exports -------
 export HISTTIMEFORMAT='%b %d %I:%M %p ' # using strftimr format
-export HISTCONTROL=ignoreboth           # ignoredups:ignorespace
-export HISTIGNORE="history:pwd:exit:df:ls:ls -la:ll:l:c:x:d:h:bc:cd:src:"
+export EDITOR="${MY_PROGRAMS}/VSCode/Code -w"
+export HISTCONTROL=ignoreboth # ignoredups:ignorespace
+export HISTIGNORE="pwd:df:ls:ll:l:c:x:d:h:bc:cd:src:"
 
-# ----- SHORTCUTS ------
+# -------- general shortcut ----------
 alias count='find . -type f | wc -l'
+alias find-file='find . -print | grep '
 alias lt='ls --human-readable --size -1 -S --classify'
 alias x='exit'
 alias get='time ll -R | grep '
 alias ~='cd ~ && .'
 alias grepr='grep -Enr --color=auto'
-alias grep='grep -E --color=auto'
+alias grep='grep --color=auto'
 alias sed='sed -E'
 alias lgrep='l | grep '
 alias agrep='alias | grep '
+alias hgrep='history | grep '
 alias ll='ls --color=auto -ltrahG'
 alias ls='ls --color=auto'
 alias l='ls --color=auto *'
@@ -103,34 +108,62 @@ alias cd..='cd ../..'
 alias cd...='cd ../../..'
 alias cd....='cd ../../../..'
 alias ,='code .'
+alias npp="start ${MY_PROGRAMS}/Notepad++/notepad++.exe"
+alias git_bash="${MY_PROGRAMS}/Git/git-bash.exe"
 alias k='kill'
 alias echo='echo -e'
+alias config='cd ~/Desktop/config/bash_config/ && ,'
 alias src='source ~/.bash_profile'
 alias bashrc='npp ~/.bashrc'
-alias vh='vagrant halt'
-alias vd='vagrant destroy'
-alias config='cd H:/Desktop/Git/config && explorer .'
-alias d='cd H:/Desktop/'
+alias kb="${MY_PROGRAMS}/kubectl/kubectl"
+alias mkb="${MY_PROGRAMS}/kubectl/minikube"
+alias vh="vagrant halt"
+alias vu="vagrant up"
+alias vr="vagrant reload"
+alias vrp="vagrant reload --provision"
+alias vd="vagrant destroy"
+alias vssh="vagrant ssh"
 
-dup() { cat -n $1 | sort -k2 -k1n | uniq -f1 -cd; }
+tar-gz() {
+	show_command tar -czvf test.tar.gz $@
+}
+
+pull_if_branch_is() {
+	is_master=$(git rev-parse --abbrev-ref HEAD | grep ${1})
+	if [[ "${is_master}" ]]; then
+		git pull
+	else
+		error_msg "NOT '$1' branch"
+	fi
+}
+
+dup() {
+	show_command cat -n $1 | sort -k2 -k1n | uniq -f1 -cd
+}
 
 unique() {
-	dup ${2} | grep "${1}"
-	# cat file | sort | uniq -u
+	show_command dup ${2} | grep "${1}"
 }
 
 del-dup-keep-1st-instance() {
-	cat -n $1 | sort -uk2 | sort -nk1 | cut -f2- > ${2:-refined}.txt 2>&1
+	show_command cat -n $1 | sort -uk2 | sort -nk1 | cut -f2- >${2:-refined}.txt 2>&1
 }
 
 kill() {
 	for pid_name in "$@"; do
-		taskkill -f -im "${pid_name}.exe" -t
+		show_command taskkill -f -im "${pid_name}.exe" -t
 	done
 }
 
-git_bash() {
-	"${BASH_PATH}/git-bash.exe"
+export DEBUG_MODE=0
+_() {
+	if [[ $DEBUG_MODE == 0 ]]; then
+		set -x
+		DEBUG_MODE=1
+	else
+		set +x
+		DEBUG_MODE=0
+	fi
 }
 
 b() {
@@ -153,7 +186,85 @@ b() {
 	fi
 }
 
-# ------ PROGRAMMING -----
+utc() {
+	if [ $# -eq 0 ]; then
+		show_command date -d "+4 Hours" +'%Y-%m-%dT%H:%M:%SZ'
+	else
+		show_command date -d "+4 Hours ${1} Minutes" +'%Y-%m-%dT%H:%M:%SZ'
+	fi
+}
+
+rename-tab() {
+	show_command ConEmuC -GuiMacro Rename 0 "${1}"
+}
+
+rename_file_extensions() {
+	for f in *.${1}; do
+		show_command mv -- "$f" "${f%.$1}.$2"
+	done
+}
+
+find_replace() {
+	sed -i "s/${1}/${2}/" ${3}
+}
+
+# alias wait_for_user_to_press_enter_and_exit="printf '\n\n=== PRESS [Enter] To EXIT ==='; read -p "."; exit"
+
+# start in a git bash instance and run a command from there
+# git_bash -lic "client; wait_for_user_to_press_enter_and_exit" &
+
+highlight() {
+	echo "${Black}${On_Cyan} $@ ${Color_Off}"
+}
+
+prompt() {
+	echo "\t${Black}${On_Red} $@ ${Color_Off}"
+}
+
+show_command() {
+	prompt $@
+	"$@"
+}
+
+draw_line() {
+	echo "${BCyan}.................................... ${1:-.} ...................................${Color_Off}"
+}
+
+highlight_with_date() {
+	if [ $# -eq 0 ]; then
+		echo "================ $(date --utc --iso-8601=sec) ================"
+	else
+		color=$1
+		shift 1
+		echo "$color================ $@ $(date --utc --iso-8601=sec) ================${Color_Off}"
+	fi
+}
+
+error_msg() {
+	echo "\n${BRed}ERROR: $*${Color_Off}" >&2
+}
+
+# --------- Programming --------
+
+# display when testing
+# the following goes in a gradle file
+
+#test {
+#    testLogging {
+#        events "passed", "failed", "standardOut", "standardError"
+#    }
+#}
+
+# tasks.withType(JavaExec) {
+#    if (System.getProperty('DEBUG', 'false') == 'true') {
+#        jvmArgs '-Xdebug', '-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005'
+#    }
+#}
+
+# gradle test --debug-jvm
+
+# Java
+alias gradle='./gradlew'
 
 jrun() {
 	name=$1
@@ -172,6 +283,7 @@ jrun() {
 	java $name
 }
 
+# C#
 alias .run='dotnet run'
 alias .build='dotnet build'
 alias .clean='dotnet clean'
@@ -183,12 +295,26 @@ alias .watch_build='dotnet watch build'
 alias .watch_test='dotnet watch test'
 alias .debugon='export VSTEST_HOST_DEBUG=1'
 alias .debugoff='export VSTEST_HOST_DEBUG=0'
+alias .nuget-local-clear='dotnet nuget locals all --clear'
+
+alias .r='.run'
+alias .b='.build'
+alias .c='.clean'
+alias .t='.test'
 
 .testp() { .test --filter Priority=${1:-1} --logger:"console;verbosity=detailed"; }
 .testm() { .test --filter Name~$1 --logger:"console;verbosity=detailed"; }
 .testc() { .test --filter ClassName~$1 --logger:"console;verbosity=detailed"; }
 .test_except_this() { .test --filter ClassName!~$1; }
 .watch_testc() { .watch_test --filter ClassName~$1; }
+
+.tests() {
+	if [ $# -eq 0 ]; then
+		.test | grep "Passed!  - Failed:"
+	else
+		.test $1 | grep "Passed!  - Failed:"
+	fi
+}
 
 .debug_test() {
 	.debugon
@@ -211,88 +337,40 @@ alias .debugoff='export VSTEST_HOST_DEBUG=0'
 .ref_rm_from_sln() { dotnet sln remove $1; }
 .ref_add() { dotnet add reference $1; }
 .kill() { kill dotnet; }
+.k() { kill dotnet; }
 
-cpp() { g++ $1.cpp -o $1 && ./$1; }
-cc() { g++ $1.cc -o $1 && ./$1; }
+# C++
+# cpp() { g++ $1.cpp -o $1 && ./$1; }
+# cc() { g++ $1.cc -o $1 && ./$1; }
 
+# python
 TRUST="--trusted-host pypi.org --trusted-host files.pythonhosted.org"
 
-# ----- GIT -----
-alias g='git'
-alias gb='g branch'
-alias gbr='gb -r'
-alias dasb="for d in ./*/ ; do (cd "$d" && gbra); done"
-alias gbd='gb -D'
-alias gbdr='g push origin --delete'
-alias greset='g reset --hard'
-alias gclone='g clone'
-alias gitclean='g clean -xdf -e .vagrant'
-alias gsta='g stash'
-alias gstaa='g stash apply'
-alias gf='g fetch'
-alias gpl='g pull'
-alias gp='g push'
-alias gd='g diff'
-alias gm='g merge'
-alias gc='g commit -m'
-alias gcm='g commit'
-alias ga='g add'
-alias gac='g commit -am'
-alias gaa='g add .'
-alias gs='g status'
-alias gsh='g show'
-alias gco='g checkout'
-alias gcom='g checkout master'
-alias gmpl='gco master && gpl'
-alias gmm='gm master'
-alias gma='gm --abort'
-alias gcob='g checkout -b'
-alias grm='g rm'
-alias gsw='g switch -'
-alias ab='echo -e "\n***$(__git_ps1) ***"'
-alias gchmod='g update-index --chmod=+x'
-alias gl='g log -10 --pretty=format:"%h | %<(25)%an | %<(15)%ar | %s"'
-alias gdal='gcom && gb | grep -v "master" | xargs g branch -D '
-alias glc='g log --stat --pretty="%C(Yellow)=====================================================================%n%h | %C(magenta)%an%Creset | %ad | %ar %n%n %B" --graph'
+# --------- db ----------
+alias dump='flush'
+alias rap='redis; amq; pg'
+alias ra='redis; amq'
 
-gbd_all() { gbd $1 && gbdr $1; }
-gacp() { gaa && gc "$1" && gp; }
-glg() { glc --grep=$1; }
-gcp() { gc "$1" && gp; }
-
-mm() {
-	gco ${1:-master}
-	gpl
-	gco -
-	gm ${1:-master}
-}
-
-gbra() {
-	if [[ $(git branch | grep "main") ]]; then
-		git checkout main
-		git branch | grep -v "main" | xargs git branch -D
-
-	else
-		git checkout master
-		git branch | grep -v "master" | xargs git branch -D
+flush() {
+	local result=$(redis-cli flushdb)
+	if [[ $result == "OK" ]]; then
+		highlight "REDIS FLUSHED"
 	fi
 }
 
-pull_if_branch_is() {
-	is_master=$(git rev-parse --abbrev-ref HEAD | grep ${1})
-	if [[ "${is_master}" ]]; then
-		git pull
-	else
-		error_msg "NOT '$1' branch"
-	fi
+pgdump_sql() {
+	table_name=${1}
+	db_name=${2}
+	pg_dump -U postgres --data-only --table=${table_name} --file=${3:-new_sql}.sql ${db_name}
 }
 
+export REDIS_PORT=6379
 rm_redis_key() {
-	local keys=$(redis-cli KEYS "*${1}*")
+	local keys=$(redis-cli -p ${REDIS_PORT} KEYS "*${1}*")
 
 	if [[ -n "$keys" ]]; then
 		for key in ${keys[@]}; do
-			local result=$(echo "redis-cli DEL ${key}" | bash)
+			local result=$(echo "redis-cli -p ${REDIS_PORT} DEL ${key}" | bash)
 			if [[ $result == "1" ]]; then
 				echo "REMOVED | $key"
 			fi
@@ -302,30 +380,81 @@ rm_redis_key() {
 	fi
 }
 
-find_replace() {
-	sed -i "s/${1}/${2}/" ${3}
+# --------- Git ----------
+alias gb='git branch'
+alias gbr='gb -r'
+alias gbdr='git push origin --delete'
+alias greset='git reset --hard'
+alias gclone='git clone'
+alias gclean='git clean -xdf -e .vagrant -e .build -e *.log'
+alias gsta='git stash'
+alias gstaa='git stash apply'
+alias gpl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gm='git merge'
+alias gc='git commit -m'
+alias gcm='git commit'
+alias ga='git add'
+alias gac='git commit -am'
+alias gaa='git add .'
+alias gs='git status'
+alias gsh='git show'
+alias gco='git checkout'
+alias gma='gm --abort'
+alias gcob='git checkout -b'
+alias grestore='git restore --staged'
+alias grm='git rm'
+alias gsw='git switch -'
+alias ab='echo -e "\n***$(__git_ps1) ***"'
+alias gchmod='git update-index --chmod=+x'
+alias gl='git log -10 --pretty=format:"%h | %<(25)%an | %<(15)%ar | %s"'
+alias glc='git log --stat --pretty="%C(Yellow)=====================================================================%n%h | %C(magenta)%an%Creset | %ad | %ar %n%n %B" --graph'
+
+get_master_branch() {
+	local BRANCH="master"
+
+	if [[ $(git branch | grep "activeSprint") ]]; then
+		BRANCH="activeSprint"
+
+	elif [[ $(git branch | grep "main") ]]; then
+		BRANCH="main"
+	fi
+
+	# same as returning a value
+	echo "$BRANCH"
 }
 
-highlight() {
-	echo "${Black}${On_Cyan} $@ ${Color_Off}"
+gcom() {
+	local branch=$(get_master_branch)
+	show_command git checkout $branch
 }
 
-draw_line() {
-	echo "${BCyan}.................................... ${1:-.} ...................................${Color_Off}"
+gbra() {
+	local branch=$(get_master_branch)
+	show_command git checkout $branch
+	show_command git branch | grep -v "${branch}" | xargs git branch -D
 }
 
-highlight_with_date() {
-	if [ $# -eq 0 ]; then
-		echo "================ $(date --utc --iso-8601=sec) ================"
+gacp() { gaa && gc "$1" && gp; }
+glg() { glc --grep=$1; }
+gcp() { gc "$1" && gp; }
+
+mm() {
+	if [[ "${1}" ]]; then
+		merge_branch "${1}"
+
 	else
-		color=$1
-		shift 1
-		echo "$color================ $@ $(date --utc --iso-8601=sec) ================${Color_Off}"
+		local branch=$(get_master_branch)
+		merge_branch "$branch"
 	fi
 }
 
-error_msg() {
-	echo "\n${BRed}ERROR: $*${Color_Off}" >&2
+merge_branch() {
+	show_command git checkout ${1}
+	show_command git pull origin ${1}
+	show_command git checkout -
+	show_command git merge ${1}
 }
 
 export PS1='\
@@ -337,3 +466,5 @@ export PS1='\
 \[\]\n\
 \['"${BWhite}"'\]$ \['"${Color_Off}"'\]\
 \[\]'
+
+trap 'prompt "# $BASH_COMMAND"' DEBUG
