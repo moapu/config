@@ -65,6 +65,8 @@ analytics.mobile.walmart.com
 client-analytics.braintreegateway.com
 client-telemetry.roblox.com
 sas.samsungcloudsolution.com
+nav.smartscreen.microsoft.com
+unitedstates.smartscreen-prod.microsoft.com
 
 #=============#
 # ADULT-SITES #
@@ -76,17 +78,14 @@ hdpornhub.co
 hduporn.com
 i3.yespornplease.com
 kahramansturk.com
-nav.smartscreen.microsoft.com
 newdonate.com
 porn62.com
 s.w.org
-s9.trafficdeposit.com
 similar-porn.com
 similar.porn
 static-vz.brazzerscontent.com
 static.adxadserv.com
 syndication.exosrv.com
-unitedstates.smartscreen-prod.microsoft.com
 video.redwap2.com
 wpad.hsd1.pa.comcast.net
 www.likuoo.video
@@ -95,10 +94,8 @@ www.redwap2.com
 www.xanow.com
 www.xxxjoy.net
 www3.pornqd.com
-config.edge.skype.com
 cdn.redwap.xyz
 www.indianpornvideo.org
-9eb10b7a3d04a.com
 hubt.pornhub.com
 pornve.com
 www.megatube.xxx
