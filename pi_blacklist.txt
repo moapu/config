@@ -67,27 +67,25 @@ client-telemetry.roblox.com
 sas.samsungcloudsolution.com
 nav.smartscreen.microsoft.com
 unitedstates.smartscreen-prod.microsoft.com
+canonicalizer.ucsuri.tcs
+syndication.exosrv.com
+wpad.hsd1.pa.comcast.net
 
 #=============#
 # ADULT-SITES #
 #=============#
-canonicalizer.ucsuri.tcs
 cdn.porn62.com
 cefaceker.com
 hdpornhub.co
 hduporn.com
 i3.yespornplease.com
-kahramansturk.com
-newdonate.com
 porn62.com
 s.w.org
 similar-porn.com
 similar.porn
 static-vz.brazzerscontent.com
 static.adxadserv.com
-syndication.exosrv.com
 video.redwap2.com
-wpad.hsd1.pa.comcast.net
 www.likuoo.video
 www.myhdporn.net
 www.redwap2.com
