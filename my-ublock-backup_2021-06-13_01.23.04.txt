@@ -1,0 +1,45 @@
+{
+  "timeStamp": 1623561784412,
+  "version": "1.35.2",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "firewallPaneMinimized": false,
+    "importedLists": [],
+    "popupPanelSections": 63,
+    "webrtcIPAddressHidden": true
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-abuse",
+    "ublock-unbreak",
+    "adguard-generic",
+    "adguard-mobile",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "spam404-0",
+    "adguard-annoyance",
+    "adguard-social",
+    "fanboy-cookiemonster",
+    "ublock-annoyances",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* * 3p-script block\n* * 3p-frame block\n* * 3p block\n* googlevideo.com * noop\ngithub.com * 3p noop\nwww.youtube.com ytimg.com * noop\ndrive.google.com * 3p noop\n* disqus.com * block\nwww5.gowatchseries.bz vidembed.net * noop\n* jwpcdn.com * noop\nwww5.gowatchseries.bz storage.googleapis.com * noop\nfast.com nflxvideo.net * noop\n* gstatic.com * block\nanimedao.to fontawesome.com * noop\nanimedao.to plyr.io * noop\nanimedao.to storage.googleapis.com * noop\nanimedao.to cloudflare.com * noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-popups: * true\nno-csp-reports: * true",
+  "userFilters": ""
+}
