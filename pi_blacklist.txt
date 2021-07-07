@@ -64,7 +64,6 @@ pubads.g.doubleclick.net
 analytics.mobile.walmart.com
 client-analytics.braintreegateway.com
 client-telemetry.roblox.com
-sas.samsungcloudsolution.com
 nav.smartscreen.microsoft.com
 unitedstates.smartscreen-prod.microsoft.com
 canonicalizer.ucsuri.tcs
