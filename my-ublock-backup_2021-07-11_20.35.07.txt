@@ -1,0 +1,44 @@
+{
+  "timeStamp": 1626035707500,
+  "version": "1.36.2",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "contextMenuEnabled": false,
+    "firewallPaneMinimized": false,
+    "importedLists": [],
+    "popupPanelSections": 63,
+    "showIconBadge": false,
+    "tooltipsDisabled": true,
+    "webrtcIPAddressHidden": true
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-abuse",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "spam404-0",
+    "fanboy-cookiemonster",
+    "ublock-annoyances",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop\n* * 3p-script block\n* * 3p-frame block\n* * 3p block\n* googlevideo.com * noop\ngithub.com * 3p-script noop\ngithub.com * 3p noop\nwww.youtube.com ytimg.com * noop\ndrive.google.com * 3p noop\n* disqus.com * block\nwww5.gowatchseries.bz vidembed.net * noop\n* jwpcdn.com * noop\nwww5.gowatchseries.bz storage.googleapis.com * noop\nfast.com nflxvideo.net * noop\n* gstatic.com * block\nanimedao.to plyr.io * noop\nanimedao.to storage.googleapis.com * noop\nanimedao.to cloudflare.com * noop\nwww.youtube.com youtube-ui.l.google.com * noop\nwww.bayyinahtv.com youtube.com * noop\nwww.bayyinahtv.com youtube-ui.l.google.com * noop\n* doubleclick.net * block\naccounts.google.com youtube.com * noop\naccounts.google.com gstatic.com * noop\nmail.google.com gstatic.com * noop\nmail.google.com googleusercontent.com * noop\nwww.instagram.com z-p42-instagram.c10r.facebook.com * noop\nwww.instagram.com cdninstagram.com * noop\n* googlesyndication.com * block\n* googletagmanager.com * block\n* googletagservices.com * block\n* amazon-adsystem.com * block\ndrive.google.com gstatic.com * noop\n* google-analytics.com * block\nwww5.gowatchseries.bz themovieseries.net * noop\n* bidgear.com * block\n* adskeeper.co.uk * block\nwww5.gowatchseries.bz vidnext.net * noop\nwww5.gowatchseries.bz jwplayer-dualstack.map.fastly.net * noop\n* branch.io * block\n* facebook.net * block\n* scorecardresearch.com * block\n* newrelic.com * block\nwww.cwtv.com ssl-star.cwtv.com.c.footprint.net * noop\nwww.cwtv.com theplatform.com * noop\nwww.cwtv.com thecwvideo.com * noop\nbayyinahtv.com zencdn.net * noop\nbayyinahtv.com dualstack.osff.map.fastly.net * noop\nostechnix.com cloudflare.com * noop\n* google.com * block\naddons.mozilla.org mozilla.net * noop\naddons.mozilla.org d11j15s5geoh80.cloudfront.net * noop\naddons.mozilla.org d1sp2sgy246t7c.cloudfront.net * noop\n* bugsnag.com * block\n* cloudflare.net * noop\n* facebook.com * block\n* instagram.com * block\n* cloudflare.com * noop\n* moatads.com * block\nwww.cwtv.com dlvr1.net * noop\nwww.cwtv.com akamaiedge.net * noop\nwww.cwtv.com akamaized.net * noop\nwww.cwtv.com akamai.net * noop\nwww.amazon.com ssl-images-amazon.com * noop\nwww.amazon.com media-amazon.com * noop\nwww.amazon.com d3ag4hukkh62yn.cloudfront.net * noop\n* comcast.net * block\nstackoverflow.com sstatic.net * noop\nunix.stackexchange.com sstatic.net * noop\n* jsdelivr.net * noop\nwww.youtube.com ggpht.com * noop\nwww.youtube.com googleusercontent.com * noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-popups: * true\nno-csp-reports: * true",
+  "userFilters": "! 2021-06-18 https://www5.gowatchseries.bz\nwww5.gowatchseries.bz##.socil_pluin > ul\nwww5.gowatchseries.bz##.notice\nwww5.gowatchseries.bz##.share\nwww5.gowatchseries.bz##.watch\n"
+}
