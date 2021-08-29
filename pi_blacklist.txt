@@ -23,7 +23,6 @@ sb.scorecardresearch.com
 securepubads.g.doubleclick.net
 tag.researchnow.com
 tpc.googlesyndication.com
-www.facebook.com
 googleads4.g.doubleclick.net
 www.googletagservices.com
 client-analytics.braintreegateway.com
