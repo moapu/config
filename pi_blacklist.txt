@@ -80,6 +80,12 @@ unitedstates.smartscreen-prod.microsoft.com
 canonicalizer.ucsuri.tcs
 syndication.exosrv.com
 wpad.hsd1.pa.comcast.net
+googletagservices.com
+googletagmanager.com
+z.moatads.com
+cdn.krxd.net
+cdn-gl.imrworldwide.com
+js-agent.newrelic.com
 
 #=============#
 # ADULT-SITES #
