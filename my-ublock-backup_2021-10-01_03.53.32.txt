@@ -1,0 +1,44 @@
+{
+  "timeStamp": 1633060412800,
+  "version": "1.37.2",
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "contextMenuEnabled": false,
+    "firewallPaneMinimized": false,
+    "importedLists": [],
+    "popupPanelSections": 63,
+    "showIconBadge": false,
+    "tooltipsDisabled": true,
+    "webrtcIPAddressHidden": true
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-abuse",
+    "ublock-unbreak",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "spam404-0",
+    "fanboy-cookiemonster",
+    "ublock-annoyances",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "* * 3p-script block\n* googlevideo.com * noop\n* disqus.com * block\n* jwpcdn.com * noop\n* gstatic.com * block\n* doubleclick.net * block\n* googlesyndication.com * block\n* googletagmanager.com * block\n* googletagservices.com * block\n* amazon-adsystem.com * block\n* google-analytics.com * block\n* bidgear.com * block\n* adskeeper.co.uk * block\n* branch.io * block\n* facebook.net * block\n* scorecardresearch.com * block\n* newrelic.com * block\n* google.com * block\n* bugsnag.com * block\n* cloudflare.net * noop\n* facebook.com * block\n* instagram.com * block\n* cloudflare.com * noop\n* moatads.com * block\n* comcast.net * block\n* jsdelivr.net * noop\n* googleadservices.com * block\n* adsrvr.org * block\n* jwplayer-dualstack.map.fastly.net * noop\n* storage.googleapis.com * noop\n* sstatic.net * noop\n* chatango.com * block\n* krxd.net * block\n* mparticle.com * block\n* akamaiedge.net * noop\n* akamaized.net * noop\n* akamai.net * noop\n* twitter.com * block\n* sekindo.com * block\n* maps.googleapis.com * block\n* adpushup.com * block",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-popups: * true\nno-csp-reports: * true",
+  "userFilters": ""
+}
