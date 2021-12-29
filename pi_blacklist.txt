@@ -1,6 +1,3 @@
-#===========#
-#   EXACT   #
-#===========#
 airlytics-web.airlock.twcmobile.weather.com
 firebase-settings.crashlytics.com
 tags.tiqcdn.com
@@ -86,6 +83,8 @@ z.moatads.com
 cdn.krxd.net
 cdn-gl.imrworldwide.com
 js-agent.newrelic.com
+chatango.com
+psupaids.com
 
 #=============#
 # ADULT-SITES #
@@ -120,4 +119,5 @@ www.ceporn.net
 es.spankbang.com
 www.yespornplease.porn
 sxyprn.net
+sxyprn.com
 fullporner.com
