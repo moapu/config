@@ -85,6 +85,10 @@ cdn-gl.imrworldwide.com
 js-agent.newrelic.com
 chatango.com
 psupaids.com
+app-measurement.com
+improving.duckduckgo.com
+firebaselogging-pa.googleapis.com
+device-metrics-us-2.amazon.com
 
 #=============#
 # ADULT-SITES #
