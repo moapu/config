@@ -89,6 +89,8 @@ app-measurement.com
 improving.duckduckgo.com
 firebaselogging-pa.googleapis.com
 device-metrics-us-2.amazon.com
+configprd.samsungcloudsolution.net
+ad.doubleclick.net
 
 #=============#
 # ADULT-SITES #
