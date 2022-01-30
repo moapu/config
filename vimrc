@@ -40,7 +40,9 @@ set showmode
 
 set history=1000			" Set the commands to save in history default number is 20
 
+" ---------------------------------------------------------------------------------------------------------------------
 " MAPPINGS
+" ---------------------------------------------------------------------------------------------------------------------
 nnoremap <leader>\ ``			
 inoremap jj <esc>
 nnoremap qq :q<CR> 
@@ -51,15 +53,17 @@ nnoremap <C-p> :e
 nnoremap <C-x> dd 
 nnoremap o o<esc>
 nnoremap O O<esc>
-nnoremap <leader> :Sex!<CR>
 nnoremap Y y$
 nnoremap <space> :
 nnoremap <C-g> :
 
+" file explorer
+nnoremap <leader> :Sex!<CR>
+
+" moving lines up and down
 nnoremap <C-Down> :m .+1<CR>==
 nnoremap <C-Up> :m .-2<CR>==
 vnoremap <C-Down> :m '>+1<CR>==gv=gv
 vnoremap <C-Up> :m '<-2<CR>==gv=gv
 inoremap <C-Down> <Esc>:m .+1<CR>==gi
 inoremap <C-Up> <Esc>:m .-2<CR>==gi
-
