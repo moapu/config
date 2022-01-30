@@ -17,7 +17,7 @@ set nobackup				" Do not save backup files.
 set ignorecase
 set incsearch
 set hlsearch
-set number
+set number relativenumber 
 set showmatch
 set smartcase
 set nowrap
@@ -29,36 +29,38 @@ set smarttab
 set clipboard=unnamedplus		" Use system clipboard
 set diffopt=filler,vertical		" Vertical diff
 set scrolloff=10			" Do not let cursor scroll below or above N number of lines when scrolling.
+set history=1000			" Set the commands to save in history default number is 20
 
 set showcmd				" show cmd as you type
 set statusline=
 set statusline+=\ %F\ %m\ %Y\ %R
 set statusline+=%=
-set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+set statusline+=\ line\ %l\ col:\ %c\ \|\ %L\ lines\ \|\ percent:\ %p%%
 set laststatus=2
 set showmode
-
-set history=1000			" Set the commands to save in history default number is 20
 
 " ---------------------------------------------------------------------------------------------------------------------
 " MAPPINGS
 " ---------------------------------------------------------------------------------------------------------------------
+let mapleader=' '
+
 nnoremap <leader>\ ``			
 inoremap jj <esc>
-nnoremap qq :q<CR> 
-nnoremap ww :w<CR>
-nnoremap <C-f> :find 
-nnoremap <C-d> yyp 
-nnoremap <C-p> :e 
-nnoremap <C-x> dd 
+nnoremap <leader>nr :set norelativenumber<CR> 
+nnoremap <leader>rn :set relativenumber<CR> 
+nnoremap <leader>q :q<CR> 
+nnoremap <leader>s :w<CR>
+nnoremap <leader>f :find 
+nnoremap <leader>d yyp 
+nnoremap <leader>p :e<space> 
+nnoremap <leader>x dd 
 nnoremap o o<esc>
 nnoremap O O<esc>
 nnoremap Y y$
-nnoremap <space> :
-nnoremap <C-g> :
+nnoremap ; :
 
 " file explorer
-nnoremap <leader> :Sex!<CR>
+nnoremap <leader>1 :e .<CR>
 
 " moving lines up and down
 nnoremap <C-Down> :m .+1<CR>==
