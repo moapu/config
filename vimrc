@@ -30,12 +30,24 @@ set clipboard=unnamedplus		" Use system clipboard
 set diffopt=filler,vertical		" Vertical diff
 set scrolloff=10			" Do not let cursor scroll below or above N number of lines when scrolling.
 set history=1000			" Set the commands to save in history default number is 20
-
 set showcmd				" show cmd as you type
+
+let g:currentmode={
+       \ 'n'  : 'NORMAL',
+       \ 'v'  : 'VISUAL',
+       \ 'V'  : 'V·Line',
+       \ "\<C-V>" : 'V·Block',
+       \ 'i'  : 'INSERT',
+       \ 'R'  : 'R',
+       \ 'Rv' : 'V·Replace',
+       \ 'c'  : 'Command',
+       \}
+
 set statusline=
-set statusline+=\ %F\ %m\ %Y\ %R
+set statusline+=[%{toupper(g:currentmode[mode()])}]
+set statusline+=\ %F\ %m\ %R
 set statusline+=%=
-set statusline+=\ line\ %l\ col:\ %c\ \|\ %L\ lines\ \|\ percent:\ %p%%
+set statusline+=\ %Y\ \|\ %l/%L\ \|\ %p%%
 set laststatus=2
 set showmode
 
