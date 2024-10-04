@@ -2,6 +2,12 @@
 www.pornohdmega.com
 www.pornyhd.com
 
+all.dns.mullvad.net
+family.dns.mullvad.net
+extended.dns.mullvad.net
+base.dns.mullvad.net
+adblock.dns.mullvad.net
+
 wproxy.net
 anonymizing.net
 extremevpn.com
