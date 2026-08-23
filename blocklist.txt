@@ -22,6 +22,13 @@ multi.xxx
 
 # analytics 
 analytics.twitter.com
+pagead2.googlesyndication.com
+mediavisor.doubleclick.net
+m.doubleclick.net
+static.doubleclick.net
+ad.doubleclick.net
+stats.g.doubleclick.net
+
 
 # vpn
 all.dns.mullvad.net
