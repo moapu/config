@@ -29,13 +29,8 @@ static.doubleclick.net
 ad.doubleclick.net
 stats.g.doubleclick.net
 
-
 # vpn
-all.dns.mullvad.net
-family.dns.mullvad.net
-extended.dns.mullvad.net
-base.dns.mullvad.net
-adblock.dns.mullvad.net
+
 
 # proxy
 wproxy.net
