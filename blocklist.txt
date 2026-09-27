@@ -28,6 +28,7 @@ m.doubleclick.net
 static.doubleclick.net
 ad.doubleclick.net
 stats.g.doubleclick.net
+safebrowsing.googleapis.com
 
 # vpn
 
