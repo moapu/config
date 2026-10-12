@@ -29,6 +29,8 @@ static.doubleclick.net
 ad.doubleclick.net
 stats.g.doubleclick.net
 safebrowsing.googleapis.com
+init.itunes.apple.com
+bag.itunes.apple.com
 
 # vpn
 
