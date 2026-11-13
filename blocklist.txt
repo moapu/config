@@ -29,6 +29,7 @@ static.doubleclick.net
 ad.doubleclick.net
 stats.g.doubleclick.net
 safebrowsing.googleapis.com
+firebase-settings.crashlytics.com
 
 # vpn
 
